@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for i in range(97, 123):
-    if i is not (ord('q')) and i is not (ord('e')):
-        print('{}'.format(chr(i)), end="")
+for n in range(97, 123):
+    if n != 113 and n != 101:
+        print("{}".format(chr(n)), end="")
