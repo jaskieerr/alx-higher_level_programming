@@ -5,10 +5,11 @@
 
 def fizzbuzz():
     for i in range(1, 101):
+        output = ""
         if i % 3 == 0:
-            print('Fizz', end=' ')
+            output += 'Fizz'
         if i % 5 == 0:
-            print('Buzz', end=' ')
-        if i % 3 != 0 and i % 5 != 0:
-            print(i, end=' ')
-    print()
+            output += 'Buzz'
+        if not output:
+            output = str(i)
+        print(output, end=' ')
