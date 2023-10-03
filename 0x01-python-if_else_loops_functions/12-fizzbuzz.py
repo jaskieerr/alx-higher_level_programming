@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # If num divisible by 3, print fizz
 # .............   by 5, print buzz
 # ...............3 n 5 print fizz buzz
