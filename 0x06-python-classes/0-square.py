@@ -3,4 +3,5 @@
 
 
 class Square:
+    '''representing class no attr'''
     pass
