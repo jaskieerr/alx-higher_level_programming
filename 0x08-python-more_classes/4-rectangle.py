@@ -58,3 +58,9 @@ class rectangluangle:
             if i != self.__height - 1:
                 rectanglu.append("\n")
         return ("".join(rectanglu))
+    
+    def __repr__(self):
+        '''the rest'''
+        rectanglu = "rectangluangle(" + str(self.__width)
+        rectanglu += ", " + str(self.__height) + ")"
+        return (rectanglu)
