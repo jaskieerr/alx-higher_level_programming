@@ -2,17 +2,17 @@
 '''shebang'''
 
 
-class rectangluangle:
-    '''representing rectangluangle'''
+class Rectangle:
+    '''representing rectangle'''
 
     def __init__(self, width=0, height=0):
-        '''initilizing a rectangluangle '''
+        '''initilizing a rectangle '''
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        '''gets n stes rectangluangle'''
+        '''gets n stes rectangle'''
         return self.__width
 
     @width.setter
@@ -37,17 +37,17 @@ class rectangluangle:
         self.__height = value
 
     def area(self):
-        '''retuns rectangluangle area'''
+        '''retuns rectangle area'''
         return (self.__width * self.__height)
 
     def perimeter(self):
-        '''returns the rectangluangle perimeter'''
+        '''returns the rectangle perimeter'''
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        '''represents rectangluangle with # and retuns
+        '''represents rectangle with # and retuns
         a printable representaion'''
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -58,9 +58,9 @@ class rectangluangle:
             if i != self.__height - 1:
                 rectanglu.append("\n")
         return ("".join(rectanglu))
-    
+
     def __repr__(self):
         '''the rest'''
-        rectanglu = "rectangluangle(" + str(self.__width)
+        rectanglu = "Rectangle(" + str(self.__width)
         rectanglu += ", " + str(self.__height) + ")"
         return (rectanglu)
