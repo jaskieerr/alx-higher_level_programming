@@ -1,5 +1,5 @@
 -- no comedy agaiiiiiinnnnnn
-SELECT tv_shows.titleFROM tv_shows
+SELECT tv_shows.title FROM tv_shows
 LEFT JOIN
 (
 	SELECT tv_shows.title FROM tv_shows
