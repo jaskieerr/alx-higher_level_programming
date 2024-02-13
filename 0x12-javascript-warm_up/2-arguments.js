@@ -8,5 +8,5 @@ if (argcc <= 2) {
 } else if (argcc === 3) {
   console.log('Argument found');
 } else {
-  console.log('Too many arguments');
+  console.log('Arguments found');
 }
