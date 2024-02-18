@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''arizona '''
+'''arizona''' 
 
 import MySQLdb
 import sys
@@ -17,10 +17,10 @@ if __name__ == "__main__":
     cr = db_conn.cursor()
 
     cr.execute("""
-                SELECT * FROM 'cities' as 'c'
-                INNER JOIN 'states' as 's'
-                   ON 'c'.'state_id' = 's'.'id'
-                ORDER BY 'c'.'id'
+                SELECT * FROM cities as c
+                INNER JOIN states as s
+                   ON c.state_id = s.id
+                ORDER BY c.id
                 """)
 
     for row in cr:
