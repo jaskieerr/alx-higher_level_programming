@@ -16,9 +16,9 @@ if __name__ == "__main__":
 
     cr = db_conn.cursor()
 
-    cr.execute("SELECT * FROM `states`
-            WHERE BINARY `name` = '{}'"
-            .format(sys.argv[4]))
+    cr.execute("SELECT * "
+               "FROM `states` "
+               "WHERE BINARY `name` = '{}'".format(sys.argv[4]))
 
     for row in cr:
         print(row)
