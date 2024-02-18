@@ -16,12 +16,14 @@ if __name__ == "__main__":
 
     cr = db_conn.cursor()
 
-    cr.execute("""
-                SELECT * FROM cities as c
-                INNER JOIN states as s
-                   ON c.state_id = s.id
-                ORDER BY c.id
-                """)
+    query = ("""
+        SELECT cities.name FROM cities
+        INNER JOIN states ON states.id=cities.state_id
+        WHERE states.name LIKE BINARY '{}'
+        ORDER BY cities.id"""
+        .format(sys.argv[4]))
+
+    cr.execute(query)
 
     for row in cr:
-        print(row)
+        print(row[0])
