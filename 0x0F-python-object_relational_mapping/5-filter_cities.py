@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''arizona''' 
+'''arizona'''
 
 import MySQLdb
 import sys
@@ -25,5 +25,11 @@ if __name__ == "__main__":
 
     cr.execute(query)
 
+    cities = []
     for row in cr:
-        print(row[0])
+        cities.append(row[0])
+
+    if cities:
+        print(", ".join(cities))
+
+    db_conn.close()
