@@ -2,8 +2,8 @@
 
 git add .
 
-message = "$1"
+message="$1"
 
-git commit -m '"$message"'
+git commit -m "$message"
 
 git push
