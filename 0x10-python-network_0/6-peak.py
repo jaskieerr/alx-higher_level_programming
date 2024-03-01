@@ -1,23 +1,25 @@
 #!/usr/bin/python3
+'''tryin divide and conquer'''
 
 def find_peak(list_of_integers):
-    """
-    fiding peak via recursion
-    """
-    n = len(list_of_integers)
-    
-    if n == 0:
+    '''divide and conquer'''
+    if list_of_integers == []:
         return None
-    
-    if n == 1:
-        return list_of_integers[0]
-    
-    mid = n // 2
-    
-    if mid - 1 >= 0 and list_of_integers[mid] < list_of_integers[mid - 1]:
-        return find_peak(list_of_integers[:mid])
-    elif mid + 1 < n and list_of_integers[mid] < list_of_integers[mid + 1]:
-        return find_peak(list_of_integers[mid:])
-    else:
-        return list_of_integers[mid]
 
+    list_len = len(list_of_integers)
+    midoflist = int(list_len / 2)
+    loi = list_of_integers
+
+    if midoflist - 1 < 0 and midoflist + 1 >= list_len:
+        return loi[midoflist]
+    elif midoflist - 1 < 0:
+        return loi[midoflist] if loi[midoflist] > loi[midoflist + 1] else loi[midoflist + 1]
+    elif midoflist + 1 >= list_len:
+        return loi[midoflist] if loi[midoflist] > loi[midoflist - 1] else loi[midoflist - 1]
+
+    if loi[midoflist - 1] < loi[midoflist] > loi[midoflist + 1]:
+        return loi[midoflist]
+
+    if loi[midoflist + 1] > loi[midoflist - 1]:
+        return find_peak(loi[midoflist:])
+    return find_peak(loi[:midoflist])
