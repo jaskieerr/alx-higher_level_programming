@@ -3,4 +3,3 @@
 const strr = 'JavaScript is amazing';
 
 console.log(strr);
-
