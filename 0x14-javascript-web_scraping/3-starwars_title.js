@@ -7,6 +7,6 @@ const url = 'https://swapi-api.hbtn.io/api/films/' + id;
 
 request(url, (err, response, body) => {
   if (err) { console.log(err); }
-  const jsonBody = JSON.parse(body);
-  console.log(jsonBody.title);
+  const budd = JSON.parse(body);
+  console.log(budd.title);
 });
